@@ -3,6 +3,7 @@ import {
   getDateRangeInMonth,
   firstDayInPrevMonth,
   firstDayInNextMonth,
+  firstDayInCurrMonth,
   compareDatesWithoutTime
  } from '../helpers/utils.js';
 import { DaysGrid } from '../components/DaysGrid';
@@ -13,7 +14,7 @@ import { ActionPanel } from '../components/ActionPanel';
 export class SimpleCalendar extends React.Component {
   constructor(props) {
     super(props);
-    const today = new Date();
+    const today = firstDayInCurrMonth(new Date());
     this.state = {
       dateRange: getDateRangeInMonth(today),
       selectedDate: today
@@ -41,7 +42,7 @@ export class SimpleCalendar extends React.Component {
   }
 
   handleClickToday() {
-    const tmpDate = new Date();
+    const tmpDate = firstDayInCurrMonth(new Date());
     this.setState({
       dateRange: getDateRangeInMonth(tmpDate),                  
       selectedDate: tmpDate
