@@ -1,0 +1,155 @@
+$grid-color: #ebebeb;
+$day-font-color: grey;
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 12px;
+}
+
+.action-panel {
+  padding: 55px 0;
+  padding-bottom: 0;
+  width: 100%;
+  min-height: 100px;
+  box-shadow: 0 2px 5px #cfcfcf;
+  background-color: #f4f4f4;
+}
+
+.center-col {
+  max-width: 960px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.search-container {
+  float: right;
+  span {
+    color: #b1b1b1;
+  }
+}
+
+.col-one-seventh {
+  width: 14.285714285714285714285714285714%;
+}
+
+.days-container {
+  border-top: 1px solid $grid-color;
+  border-left: 1px solid $grid-color;
+  max-width: 960px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.month-control-panel {
+  padding: 15px 0;
+  max-width: 960px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.day-cell {
+  display: inline-block;
+  position: relative;
+  border-right: 1px solid $grid-color;
+  border-bottom: 1px solid $grid-color;
+  padding: 10px;
+  &:before {
+    display: inline-block;
+    content: '';
+    padding: 45% 0;
+    vertical-align: top;
+  }
+}
+
+.day-legend {
+  color: $day-font-color;
+}
+
+.short-week-day {
+  display: none;
+}
+
+.week-day, .short-week-day {
+  color: $day-font-color;
+}
+
+.search-input {
+  width: 200px;
+  margin-left: 10px;
+  padding: 0 5px;
+  box-shadow: none;
+}
+
+.search-input,
+.add-button,
+.update-button,
+.month-next,
+.month-prev,
+.date-today {
+  border-radius: 2px;
+  background-color: white;
+  box-shadow: inset 0 0 2px $day-font-color;
+  height: 26px;
+  border: none;
+} 
+
+.add-button, .update-button {
+  margin: 0 5px;
+  border: none;
+  color: white;
+  background-color: #0271c7;
+  width: 80px;
+  font-weight: bold;
+}
+
+.date-today {
+  width: 50px;
+  height: 17px;
+  margin-left: 10px;
+  font-size: 10px;
+}
+
+.month-next, .month-prev {
+  width: 17px;
+  height: 17px;
+}
+
+.date-m-y {
+  font-size: 16px;
+  margin: 0 6px;
+}
+
+.today {
+  background: #b7e3fe;
+}
+
+@media only screen and (max-width: 900px) {
+  .week-day {
+    display: none;
+  }
+  .short-week-day {
+    display: inline;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .search-container {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .week-day {
+    display: none;
+  }
+  .short-week-day {
+    display: none;
+  }
+}
