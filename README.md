@@ -9,8 +9,11 @@ User story:
 # Usage
 ## Setup
 `git clone https://github.com/askov/simple-calendar`
+
 `cd simple-calendar`
+
 `npm install`
+
 `npm start`
 
 With default settings you can reach app with http://localhost:8080
