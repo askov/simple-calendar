@@ -6,7 +6,13 @@ export class ActionPanel extends React.Component {
     return (
       <div className="action-panel">
         <div className="center-col">
-          <button type="button" className="add-button">Добавить</button>
+          <button
+            type="button"
+            className="add-button"
+            onClick={this.props.handleAddClick}
+          >
+            Добавить
+          </button>
           <button type="button" className="update-button">Обновить</button>
           <div className="search-container">
             <span className="glyphicon glyphicon-search"></span>

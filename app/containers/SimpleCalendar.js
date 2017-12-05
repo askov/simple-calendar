@@ -6,7 +6,10 @@ import {
   firstDayInCurrMonth,
   compareDatesWithoutTime
  } from '../helpers/utils.js';
-import { DaysGrid } from '../components/DaysGrid';
+
+import { DaysGrid } from './DaysGrid';
+import { EditorControl } from './EditorControl';
+import { DayEventsEditor } from './DayEventsEditor';
 import { DatePicker } from '../components/DatePicker';
 import { ActionPanel } from '../components/ActionPanel';
 
@@ -52,7 +55,7 @@ export class SimpleCalendar extends React.Component {
   render() {
     return (
       <div>
-        <ActionPanel />
+        <EditorControl />
         <DatePicker
           handleClickPrev={this.handleClickPrev}
           handleClickNext={this.handleClickNext}
@@ -62,6 +65,7 @@ export class SimpleCalendar extends React.Component {
         <DaysGrid
           dateRange={this.state.dateRange}          
         />
+        <DayEventsEditor />
       </div>
     );
   }

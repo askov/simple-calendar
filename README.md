@@ -2,7 +2,9 @@
 User story:
 - I can view calendar in one month range at once
 - I can change current month to see another one
-- I can see the present day highlighted 
+- I can see the present day highlighted
+- I can select the needed day and edit events (Title and description included)
+- My events are saved in the localstorage when I click 'Save' button in the editor window
 
 # Usage
 ## Setup
